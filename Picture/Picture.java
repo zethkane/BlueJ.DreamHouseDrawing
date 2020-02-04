@@ -16,6 +16,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
 
     /**
      * Constructor for objects of class Picture
@@ -48,11 +49,19 @@ public class Picture
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+       
+        
+        sun2 = new Circle();
+        sun2.changeColor("green");
+        sun2.moveHorizontal(90);
+        sun2.moveVertical(-15);
+        sun2.changeSize(40);
+        sun2.makeVisible();
     }
 
     /**
@@ -82,5 +91,16 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
-
+    /**
+     * Use this method to make the sunset
+     */
+    public void sunset()
+    {
+        if(wall != null)
+        {
+           
+            sun.slowMoveVertical(250);
+        }
+     
+}
 }
